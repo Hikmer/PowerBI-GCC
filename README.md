@@ -17,6 +17,7 @@ Install-Module -Name MicrosoftPowerBIMgmt -Scope CurrentUser
 Running the following script as an O365 Admin will result in a JSON file saved to your local computer.  
 
 Connect-PowerBIServiceAccount -Environment USGov
+
 Invoke-PowerBIRestMethod -Url 'admin/groups?$top=5000&$skip=0&$expand=reports,dashboards,datasets,users,dataflows' -Method GET  | Out-File "C:\MyPathHere\PowerBIResults.json"
 
 Download the AdminTenantReport template file and point the data source to the JSON file exported using the PowerShell script.
