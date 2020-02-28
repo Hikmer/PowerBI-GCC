@@ -22,4 +22,4 @@ Invoke-PowerBIRestMethod -Url 'admin/groups?$top=5000&$skip=0&$expand=reports,da
 
 Download the AdminTenantReport template file and point the data source to the JSON file exported using the PowerShell script.
 
-You should now have a current listing of all your Workspaces, Users, Reports, Dashboards, Datasets and Dataflows if a very handy Power BI report.
+You should now have a current listing of all your Workspaces, Users, Reports, Dashboards, Datasets and Dataflows in a very handy Power BI report.
