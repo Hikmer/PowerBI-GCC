@@ -16,6 +16,6 @@ foreach {
  Write-Output $LogName
  $LogFile = New-Item -ItemType File -Name $LogName -Force
 
- Get-PowerBIActivityEvents -StartDateTime $StartDate -EndDateTime $EndDate -ResultType JsonString |  Out-File -FilePath "C:\Users\cychrist\Documents\PowerShell\Logs\$LogName" 
+ Get-PowerBIActivityEvents -StartDateTime $StartDate -EndDateTime $EndDate -ResultType JsonString |  Out-File -FilePath "C:\yourpath\$LogName" 
  
  }
