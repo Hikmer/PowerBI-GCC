@@ -2,7 +2,6 @@
 
 #Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
-#$MSOCred = Get-AutomationPSCredential 
 Connect-PowerBIServiceAccount -Environment USGov 
 
 
@@ -17,7 +16,6 @@ foreach {
  Write-Output $LogName
  $LogFile = New-Item -ItemType File -Name $LogName -Force
 
- Get-PowerBIActivityEvents -StartDateTime $StartDate -EndDateTime $EndDate -ResultType JsonString | 
- Out-File -FilePath "%yourpath%\Logs\PowerBI_AudititLog_$LogName.json" 
+ Get-PowerBIActivityEvents -StartDateTime $StartDate -EndDateTime $EndDate -ResultType JsonString |  Out-File -FilePath "C:\Users\cychrist\Documents\PowerShell\Logs\$LogName" 
  
  }
